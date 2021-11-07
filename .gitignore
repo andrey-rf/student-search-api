@@ -1,2 +1,4 @@
 /node_modules
 .env
+yarn-error.log
+/src/graphql/students_db/generated.ts
