@@ -1,3 +1,6 @@
+import { UserInputError } from "apollo-server-errors";
+import { cpf as cpfValidator} from "cpf-cnpj-validator";
+
 import db from "../../../db/connect";
 import { Student } from "./types";
 
@@ -21,8 +24,10 @@ const listStudents = async (
 }
 
 const getStudent = async (_: any, { cpf }: { cpf: string }) => {
-  if (!cpf) {
-    return;
+  if (!cpfValidator.isValid(cpf)) {
+    throw new UserInputError("CPF inválido", {
+      argumentName: "cpf",
+    })
   }
 
   const result = await db('students')
