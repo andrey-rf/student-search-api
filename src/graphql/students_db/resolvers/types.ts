@@ -1,5 +1,5 @@
 export interface Student {
-  name: string;
-  cpf: string;
-  email: string;
+	name: string;
+	cpf: string;
+	email: string;
 }
