@@ -1,47 +1,43 @@
 {
-  "name": "projeto-alunos-api",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "nodemon src/index.ts --exec 'yarn lint'",
-    "restart:db": "knex migrate:latest && knex seed:run",
-    "codegen": "graphql-codegen --config codegen.yml",
-    "prettier": "prettier --write ./src",
-    "lint": "eslint --config ./.eslintrc.json --fix \"./src/**/*.ts\""
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "2.2.2",
-    "@graphql-codegen/typescript": "2.3.1",
-    "@graphql-codegen/typescript-resolvers": "2.4.0",
-    "@graphql-tools/utils": "^8.5.2",
-    "@types/express": "^4.17.13",
-    "@types/graphql": "^14.5.0",
-    "@types/lodash": "^4.14.176",
-    "@types/node": "^16.11.6",
-    "@typescript-eslint/eslint-plugin": "^5.3.0",
-    "@typescript-eslint/parser": "^5.3.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb-typescript": "^15.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^2.0.14",
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
-  },
-  "dependencies": {
-    "apollo-server-errors": "^3.3.0",
-    "apollo-server-express": "^3.5.0",
-    "cors": "^2.8.5",
-    "cpf-cnpj-validator": "^1.0.3",
-    "dotenv": "^10.0.0",
-    "email-validator": "^2.0.4",
-    "express": "^4.17.1",
-    "graphql": "^16.0.1",
-    "knex": "^0.95.13",
-    "lodash": "^4.17.21",
-    "pg": "^8.7.1",
-    "ts-node": "^10.4.0"
-  }
+	"name": "projeto-alunos-api",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "nodemon src/index.ts",
+		"restart:db": "knex migrate:latest --knexfile ./src/knexfile.ts && knex seed:run --knexfile ./src/knexfile.ts",
+		"codegen": "graphql-codegen --config codegen.yml",
+		"prettier": "prettier --write ./src",
+		"lint": "eslint --config ./.eslintrc.json --fix \"./src/**/*.ts\""
+	},
+	"devDependencies": {
+		"@graphql-tools/utils": "^8.5.2",
+		"@types/express": "^4.17.13",
+		"@types/graphql": "^14.5.0",
+		"@types/lodash": "^4.14.176",
+		"@types/node": "^16.11.6",
+		"@typescript-eslint/eslint-plugin": "^5.3.0",
+		"@typescript-eslint/parser": "^5.3.0",
+		"eslint": "^8.2.0",
+		"eslint-config-airbnb-typescript": "^15.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-prettier": "^4.0.0",
+		"nodemon": "^2.0.14",
+		"prettier": "^2.4.1",
+		"typescript": "^4.4.4"
+	},
+	"dependencies": {
+		"apollo-server-errors": "^3.3.0",
+		"apollo-server-express": "^3.5.0",
+		"cpf-cnpj-validator": "^1.0.3",
+		"dotenv": "^10.0.0",
+		"email-validator": "^2.0.4",
+		"express": "^4.17.1",
+		"graphql": "^16.0.1",
+		"knex": "^0.95.13",
+		"lodash": "^4.17.21",
+		"pg": "^8.7.1",
+		"ts-node": "^10.4.0"
+	}
 }

@@ -1,37 +1,37 @@
 {
-  "env": {
-    "browser": false,
-    "commonjs": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-typescript/base",
-    "prettier"
-  ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "project": "./tsconfig.json"
-  },
-  "plugins": ["@typescript-eslint", "prettier", "import"],
-  "rules": {
-    "prettier/prettier": ["error"],
-    "import/prefer-default-export": "off",
-    "no-param-reassign": [
-      "error", 
-      { 
-        "props": false
-      }
-    ],
-    "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/no-use-before-define": [
-      "error",
-      { 
-        "functions": false 
-      }
-    ]
-  }
+	"env": {
+		"browser": false,
+		"commonjs": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"airbnb-typescript/base",
+		"prettier"
+	],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint", "prettier", "import"],
+	"rules": {
+		"prettier/prettier": ["error"],
+		"import/prefer-default-export": "off",
+		"no-param-reassign": [
+			"error",
+			{
+				"props": false
+			}
+		],
+		"@typescript-eslint/no-explicit-any": "warn",
+		"@typescript-eslint/no-use-before-define": [
+			"error",
+			{
+				"functions": false
+			}
+		]
+	}
 }

@@ -11,7 +11,10 @@ const PORT = process.env.SERVER_PORT || 4000;
 
 async function startServer() {
 	const app = express();
-	const server = new ApolloServer({ typeDefs, resolvers });
+	const server = new ApolloServer({
+		typeDefs,
+		resolvers,
+	});
 
 	await server.start();
 	server.applyMiddleware({ app });
