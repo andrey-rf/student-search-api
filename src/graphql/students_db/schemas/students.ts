@@ -8,7 +8,7 @@ const typeDefs = gql`
 	}
 
 	type Query {
-		listStudents(text: String): [Student]
+		listStudents(text: String): [Student!]!
 		getStudent(cpf: String!): Student
 	}
 
