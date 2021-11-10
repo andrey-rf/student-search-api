@@ -2,11 +2,13 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install
+COPY package.json ./
+COPY yarn.lock ./
+
+RUN yarn
 
 COPY . .
 
 EXPOSE $PORT
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
